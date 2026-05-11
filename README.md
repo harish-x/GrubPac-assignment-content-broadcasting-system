@@ -21,9 +21,8 @@ Security: Helmet, HPP, CORS, CSRF double-submit
 ```
 src/
 ├── config/         # DB pool, S3 client, secrets loader
-├── controllers/    # Thin request/response handlers
+├── controllers/    # request/response handlers
 ├── middlewares/    # Auth, CSRF, error, upload, validate
-├── migrations/     # Raw SQL migrations
 ├── models/         # SQL queries
 ├── routes/         # Express routers
 ├── services/       # Business logic
@@ -69,14 +68,12 @@ POSTGRES_DB=gurpac
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=yourpassword
 
-# JWT — must be long random strings and MUST differ from each other
 JWT_ACCESS_SECRET=change_me_access
 JWT_ACCESS_EXPIRES_IN=15m
 JWT_REFRESH_SECRET=change_me_refresh
 JWT_REFRESH_EXPIRES_IN=7d
 REFRESH_TTL_DAYS=7
 
-# Cookies
 COOKIE_SECURE=false      
 COOKIE_DOMAIN=     
 
