@@ -51,10 +51,6 @@ npm install
 
 Copy the example and fill in real values:
 
-```bash
-cp .env.example .env   # or edit .env directly
-```
-
 Required variables:
 
 ```env
